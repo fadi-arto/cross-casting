@@ -1,0 +1,69 @@
+services:
+
+  # ── Cross-Casting API ───────────────────────────────────────────────────────
+  app:
+    build: .
+    container_name: crosscasting-api
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    env_file: .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_started
+    volumes:
+      - .:/app   # live code reload during development (remove in production)
+      - vlm_cache:/var/cache/crosscasting   # page readings cache (VLM_CACHE_DIR)
+    restart: unless-stopped
+    networks:
+      - crosscasting-net
+
+  # ── PostgreSQL 16 ───────────────────────────────────────────────────────────
+  postgres:
+    image: ${POSTGRES_IMAGE:-pgvector/pgvector:pg16}
+    container_name: crosscasting-postgres
+    environment:
+      POSTGRES_DB: ${DB_NAME:-crosscasting}
+      POSTGRES_USER: ${DB_USER:-crosscasting}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme_in_production}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-crosscasting} -d ${DB_NAME:-crosscasting}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    ports:
+      - "${DB_EXPOSE_PORT:-5432}:5432"
+    restart: unless-stopped
+    networks:
+      - crosscasting-net
+
+  # ── MinIO Object Storage (S3-compatible) ────────────────────────────────────
+  # S3-compatible open-source object store — swap image for pigsty/minio fork if needed
+  minio:
+    image: ${MINIO_IMAGE:-pgsty/minio:RELEASE.2026-08-04T00-00-00Z}
+    container_name: crosscasting-minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-changeme_in_production}
+    volumes:
+      - minio_data:/data
+    ports:
+      - "${MINIO_API_PORT:-9000}:9000"
+      - "${MINIO_CONSOLE_PORT:-9001}:9001"
+    restart: unless-stopped
+    networks:
+      - crosscasting-net
+
+networks:
+  crosscasting-net:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  minio_data:
+  vlm_cache:

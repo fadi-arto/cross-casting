@@ -1,0 +1,284 @@
+{
+  "model": "anthropic/claude-haiku-5-5",
+  "pages": [
+    {
+      "page": 1,
+      "payload": {
+        "tables": [
+          {
+            "title": "Statement of Profit or Loss — FY2025 | USD",
+            "headers": [
+              "FY2024",
+              "FY2025"
+            ],
+            "continues_previous_page": false,
+            "rows": [
+              {
+                "label": "Revenue",
+                "values": [
+                  "8,450,000",
+                  "9,760,000"
+                ],
+                "kind": "data",
+                "bbox": [
+                  301,
+                  272,
+                  1452,
+                  309
+                ]
+              },
+              {
+                "label": "Cost of services",
+                "values": [
+                  "(5,070,000)",
+                  "(5,960,000)"
+                ],
+                "kind": "data",
+                "bbox": [
+                  301,
+                  309,
+                  1452,
+                  346
+                ]
+              },
+              {
+                "label": "Gross profit",
+                "values": [
+                  "3,380,000",
+                  "3,900,000"
+                ],
+                "kind": "subtotal",
+                "bbox": [
+                  301,
+                  346,
+                  1452,
+                  384
+                ]
+              },
+              {
+                "label": "Other income",
+                "values": [
+                  "125,000",
+                  "165,000"
+                ],
+                "kind": "data",
+                "bbox": [
+                  301,
+                  384,
+                  1452,
+                  421
+                ]
+              },
+              {
+                "label": "Selling expenses",
+                "values": [
+                  "(640,000)",
+                  "(710,000)"
+                ],
+                "kind": "data",
+                "bbox": [
+                  301,
+                  421,
+                  1452,
+                  459
+                ]
+              },
+              {
+                "label": "General and administrative",
+                "values": [
+                  "(980,000)",
+                  "(1,120,000)"
+                ],
+                "kind": "data",
+                "bbox": [
+                  301,
+                  459,
+                  1452,
+                  496
+                ]
+              },
+              {
+                "label": "Depreciation and amortisation",
+                "values": [
+                  "(310,000)",
+                  "(365,000)"
+                ],
+                "kind": "data",
+                "bbox": [
+                  301,
+                  496,
+                  1452,
+                  534
+                ]
+              },
+              {
+                "label": "Operating profit",
+                "values": [
+                  "1,575,000",
+                  "1,870,000"
+                ],
+                "kind": "subtotal",
+                "bbox": [
+                  301,
+                  534,
+                  1452,
+                  571
+                ]
+              },
+              {
+                "label": "Finance income",
+                "values": [
+                  "45,000",
+                  "52,000"
+                ],
+                "kind": "data",
+                "bbox": [
+                  301,
+                  571,
+                  1452,
+                  609
+                ]
+              },
+              {
+                "label": "Finance costs",
+                "values": [
+                  "(210,000)",
+                  "(255,000)"
+                ],
+                "kind": "data",
+                "bbox": [
+                  301,
+                  609,
+                  1452,
+                  646
+                ]
+              },
+              {
+                "label": "Profit before tax",
+                "values": [
+                  "1,410,000",
+                  "1,667,000"
+                ],
+                "kind": "subtotal",
+                "bbox": [
+                  301,
+                  646,
+                  1452,
+                  684
+                ]
+              },
+              {
+                "label": "Income tax",
+                "values": [
+                  "(352,500)",
+                  "(416,750)"
+                ],
+                "kind": "data",
+                "bbox": [
+                  301,
+                  684,
+                  1452,
+                  721
+                ]
+              },
+              {
+                "label": "Profit for year",
+                "values": [
+                  "1,057,500",
+                  "1,250,250"
+                ],
+                "kind": "total",
+                "bbox": [
+                  301,
+                  721,
+                  1452,
+                  759
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Selected note — Property, Plant and Equipment",
+            "headers": [
+              "FY2025 USD"
+            ],
+            "continues_previous_page": false,
+            "rows": [
+              {
+                "label": "Opening net book value",
+                "values": [
+                  "2,450,000"
+                ],
+                "kind": "data",
+                "bbox": [
+                  419,
+                  919,
+                  1334,
+                  956
+                ]
+              },
+              {
+                "label": "Additions",
+                "values": [
+                  "680,000"
+                ],
+                "kind": "data",
+                "bbox": [
+                  419,
+                  956,
+                  1334,
+                  994
+                ]
+              },
+              {
+                "label": "Disposals",
+                "values": [
+                  "(125,000)"
+                ],
+                "kind": "data",
+                "bbox": [
+                  419,
+                  994,
+                  1334,
+                  1031
+                ]
+              },
+              {
+                "label": "Depreciation charge",
+                "values": [
+                  "(365,000)"
+                ],
+                "kind": "data",
+                "bbox": [
+                  419,
+                  1031,
+                  1334,
+                  1069
+                ]
+              },
+              {
+                "label": "Closing net book value",
+                "values": [
+                  "2,700,000"
+                ],
+                "kind": "total",
+                "bbox": [
+                  419,
+                  1069,
+                  1334,
+                  1106
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page": 2,
+      "payload": {
+        "tables": []
+      }
+    }
+  ]
+}

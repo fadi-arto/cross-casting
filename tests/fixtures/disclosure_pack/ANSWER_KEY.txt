@@ -1,0 +1,23 @@
+ANSWER KEY — DO NOT UPLOAD THIS FILE DURING BLIND TESTING
+
+01 Northstar:
+- Income Statement FY2025: Revenue less cost of sales = 5,750,000, but Gross profit declared 5,650,000 (difference -100,000).
+- Profit before tax: operating profit 3,060,000 + finance income 92,000 - finance costs 340,000 + associate profit 125,000 = 2,937,000, declared 2,947,000 (difference +10,000).
+- Cash Flow FY2025: cash generated from operations based on listed components = 3,497,000, declared 3,405,000 (difference -92,000). This affects operating cash subtotal.
+- Closing cash 1,800,000 agrees with cash flow roll-forward (940,000 + 860,000), but differs from Balance Sheet cash 1,120,000 (cross-statement difference 680,000).
+- Balance Sheet subtotals and balance are internally consistent as presented.
+
+02 Riverbend:
+- Suspense account 85,000 is deliberately unmapped.
+- Trial balance has an 85,000 debit/credit imbalance (verify sign convention and all accounts).
+
+03 Orbital:
+- Designed as a clean control note. Regional revenue, eliminations, external revenue, contract balances and geographic totals are internally consistent.
+
+04 Cedar:
+- Designed as a clean control workbook. No deliberate arithmetic errors; should not produce false positives.
+
+05 Meridian PDF:
+- FY2025 gross profit should be 3,800,000 (9,760,000 - 5,960,000), declared 3,900,000 (difference +100,000).
+- PPE closing NBV should be 2,640,000 (2,450,000 + 680,000 - 125,000 - 365,000), declared 2,700,000 (difference +60,000).
+- Remaining income statement arithmetic is based on the declared gross profit and may need dependency-aware interpretation.
